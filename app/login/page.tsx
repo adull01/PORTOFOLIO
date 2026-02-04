@@ -51,7 +51,7 @@ export default function LoginPage() {
                 </form>
 
                 <p className={styles.hint}>
-                    Default password: <code>admin123</code>
+                    {/* Default password: <code>admin123</code> */}
                 </p>
             </div>
         </div>
