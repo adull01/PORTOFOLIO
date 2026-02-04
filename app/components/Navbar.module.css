@@ -74,13 +74,14 @@
     padding: 0.5rem 0.5rem;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 800;
     /* Initial size for flag */
     outline: none;
     appearance: none;
     /* Hide default arrow */
     text-align: center;
-    width: 45px;
+    width: 60px;
     transition: all 0.3s;
 }
 
@@ -190,7 +191,8 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 0.5rem;
     border-radius: 8px;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s;
 }
