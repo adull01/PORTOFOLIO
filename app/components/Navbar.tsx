@@ -28,12 +28,12 @@ const Navbar = () => {
   };
 
   const LANGUAGES = [
-    { code: 'en', flag: '🇺🇸' },
-    { code: 'id', flag: '🇮🇩' },
-    { code: 'sun', flag: '💠' },
-    { code: 'es', flag: '🇪🇸' },
-    { code: 'jp', flag: '🇯🇵' },
-    { code: 'fr', flag: '🇫🇷' },
+    { code: 'en', flag: 'EN' },
+    { code: 'id', flag: 'ID' },
+    { code: 'sun', flag: 'SU' },
+    { code: 'es', flag: 'ES' },
+    { code: 'jp', flag: 'JP' },
+    { code: 'fr', flag: 'FR' },
   ] as const;
 
   return (

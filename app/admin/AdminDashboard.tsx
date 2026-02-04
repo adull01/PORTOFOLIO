@@ -13,12 +13,12 @@ import {
 } from 'lucide-react';
 
 const LANGUAGES = [
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'id', name: 'Indonesia', flag: '🇮🇩' },
-    { code: 'es', name: 'Español', flag: '🇪🇸' },
-    { code: 'jp', name: '日本語', flag: '🇯🇵' },
-    { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'sun', name: 'Basa Sunda', flag: '💠' },
+    { code: 'en', name: 'English', flag: 'EN' },
+    { code: 'id', name: 'Indonesia', flag: 'ID' },
+    { code: 'es', name: 'Español', flag: 'ES' },
+    { code: 'jp', name: '日本語', flag: 'JP' },
+    { code: 'fr', name: 'Français', flag: 'FR' },
+    { code: 'sun', name: 'Basa Sunda', flag: 'SU' },
 ];
 
 const TRANSLATIONS = {
