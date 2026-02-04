@@ -18,6 +18,7 @@ const LANGUAGES = [
     { code: 'es', name: 'Español', flag: '🇪🇸' },
     { code: 'jp', name: '日本語', flag: '🇯🇵' },
     { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'su', name: 'Basa Sunda', flag: '💠' },
 ];
 
 const TRANSLATIONS = {
@@ -145,10 +146,35 @@ const TRANSLATIONS = {
         imageUrl: "Image de Profil",
         updateProfile: "Mettre à jour",
         uploadNew: "Télécharger une photo"
+    },
+    su: {
+        dashboard: "Dasbor",
+        projects: "Proyék",
+        profile: "Profil",
+        logout: "Kaluar",
+        welcome: "Wilujeng sumping,",
+        overview: "Ringkesan",
+        totalProjects: "Total Proyék",
+        status: "Status Sistem",
+        active: "Aktif",
+        editProject: "Édit Proyék",
+        newProject: "Proyék Anyar",
+        projectTitle: "Judul Proyék",
+        category: "Katégori",
+        description: "Déskripsi",
+        techStack: "Téknologi",
+        save: "Simpen",
+        deleteConfirm: "Hapus proyék ieu?",
+        name: "Nami",
+        role: "Peran",
+        bio: "Bio",
+        imageUrl: "Poto Profil",
+        updateProfile: "Perbarui Profil",
+        uploadNew: "Upload Poto Anyar"
     }
 };
 
-type LanguageCode = 'en' | 'id' | 'es' | 'jp' | 'fr';
+type LanguageCode = 'en' | 'id' | 'es' | 'jp' | 'fr' | 'su';
 
 export default function AdminDashboard({ initialProjects, initialProfile }: { initialProjects: Project[], initialProfile: Profile }) {
     const [activeTab, setActiveTab] = useState<'dashboard' | 'projects' | 'profile'>('dashboard');

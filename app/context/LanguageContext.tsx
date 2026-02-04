@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-type LanguageCode = 'en' | 'id' | 'es' | 'jp' | 'fr';
+type LanguageCode = 'en' | 'id' | 'es' | 'jp' | 'fr' | 'su';
 
 const TRANSLATIONS = {
     en: {
@@ -188,6 +188,43 @@ const TRANSLATIONS = {
             text: "Je suis toujours ravi de collaborer sur des projets innovants et de donner vie à des idées.",
             touch: "Contactez-moi",
             rights: "Fait avec"
+        }
+    },
+    su: {
+        navbar: {
+            about: 'Perkawis',
+            projects: 'Proyék',
+            login: 'Asup',
+            contact: 'Kontak',
+        },
+        hero: {
+            greeting: 'SAMPURASUN, SIM KURING',
+            subtitle: 'Ngadamel pangalaman digital kalayan presisi sareng kréativitas.',
+            viewWork: 'Tingali Karya',
+            moreAbout: 'Langlang Perkawis',
+            scroll: 'Gulung ka handap'
+        },
+        about: {
+            title: 'Perkawis',
+            me: 'Sim Kuring',
+            greeting: "Wilujeng, sim kuring",
+            yearsExp: 'Taun Pangalaman',
+            projects: 'Proyék',
+            satisfied: 'Sugema'
+        },
+        projects: {
+            title: 'Pilihan',
+            works: 'Karya',
+            viewProject: 'Tingali Proyék',
+            tech: 'Téknologi'
+        },
+        footer: {
+            heading: "Hayu Urang Ngadamel Hal Anu",
+            amazing: "Saé Pisan",
+            together: "Sasarengan",
+            text: "Sim kuring sok sumanget pikeun kolaborasi dina proyék inovatif sareng ngawujudkeun ide janten nyata.",
+            touch: "Hubungi Sim Kuring",
+            rights: "Didamel ku"
         }
     }
 };

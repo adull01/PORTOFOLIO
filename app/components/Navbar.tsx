@@ -30,6 +30,7 @@ const Navbar = () => {
   const LANGUAGES = [
     { code: 'en', flag: '🇺🇸' },
     { code: 'id', flag: '🇮🇩' },
+    { code: 'su', flag: '💠' },
     { code: 'es', flag: '🇪🇸' },
     { code: 'jp', flag: '🇯🇵' },
     { code: 'fr', flag: '🇫🇷' },
