@@ -32,7 +32,7 @@ export default function About({ profile }: { profile: Profile }) {
                         <h4 className={styles.role}>{profile.role}</h4>
 
                         <div className={styles.bio}>
-                            {profile.bio.split('\n').filter(line => line.trim() !== '').map((line, i) => (
+                            {(t.content?.bio || profile.bio).split('\n').filter(line => line.trim() !== '').map((line, i) => (
                                 <p key={i}>{line}</p>
                             ))}
                         </div>

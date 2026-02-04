@@ -55,8 +55,12 @@ const Projects = ({ projects }: { projects: Project[] }) => {
                         >
                             <div className={styles.cardContent}>
                                 <span className={styles.category}>{project.category}</span>
-                                <h3 className={styles.title}>{project.title}</h3>
-                                <p className={styles.description}>{project.description}</p>
+                                <h3 className={styles.title}>
+                                    {t.content?.projects?.[project.id as keyof typeof t.content.projects]?.title || project.title}
+                                </h3>
+                                <p className={styles.description}>
+                                    {t.content?.projects?.[project.id as keyof typeof t.content.projects]?.description || project.description}
+                                </p>
                                 <div className={styles.techStack}>
                                     {project.tech.map((t, i) => (
                                         <span key={i} className={styles.tag}>{t}</span>
