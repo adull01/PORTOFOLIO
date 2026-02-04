@@ -1,0 +1,631 @@
+/* Fully revamped styles for the new Admin layout */
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    background: #050505;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 280px;
+    background: #0a0a0a;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    position: fixed;
+    height: 100vh;
+    z-index: 100;
+}
+
+.logoArea {
+    margin-bottom: 3rem;
+    padding-left: 0.5rem;
+}
+
+.logoArea h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    border: none;
+    background: transparent;
+    color: #888;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.navItem:hover {
+    background: rgba(255, 255, 255, 0.03);
+    color: #fff;
+}
+
+.navItem.active {
+    background: linear-gradient(90deg, rgba(0, 243, 255, 0.1), transparent);
+    border-left: 3px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+}
+
+.sidebarFooter {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.langWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+}
+
+.langIcon {
+    color: #888;
+}
+
+.langSelect {
+    background: transparent;
+    border: none;
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.langSelect option {
+    background: #0a0a0a;
+}
+
+.logoutBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff4757;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.logoutBtn:hover {
+    background: rgba(255, 0, 0, 0.2);
+}
+
+/* Main Content Styles */
+.main {
+    flex: 1;
+    margin-left: 280px;
+    padding: 2rem 3rem;
+    background: radial-gradient(circle at top right, rgba(0, 243, 255, 0.05), transparent 40%);
+}
+
+.topHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+}
+
+.welcomeMsg h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight {
+    color: var(--neon-cyan);
+}
+
+.date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.userBadge {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--neon-purple);
+    box-shadow: 0 0 20px rgba(157, 0, 255, 0.3);
+}
+
+.userBadge img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dashboard View */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.statCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+}
+
+.statCard h3 {
+    color: #888;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.statValue {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.statTrend {
+    font-size: 0.85rem;
+    color: var(--neon-green);
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    background: rgba(57, 255, 20, 0.1);
+    border-radius: 10px;
+}
+
+.recentActivity h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.actionButtons {
+    display: flex;
+    gap: 1rem;
+}
+
+.actionBtn {
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s;
+}
+
+.actionBtn:hover {
+    background: var(--primary-gradient);
+    color: #000;
+    border-color: transparent;
+}
+
+/* Projects View */
+.viewHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 16px;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--neon-purple);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.cardHeader h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.cardTools {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.iconBtn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.iconBtn:hover {
+    background: var(--neon-cyan);
+    color: #000;
+}
+
+.iconBtn.danger:hover {
+    background: #ff4757;
+    color: #fff;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    background: rgba(0, 243, 255, 0.1);
+    color: var(--neon-cyan);
+    margin-bottom: 1rem;
+}
+
+.cardDesc {
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Profile View */
+.profileLayout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+}
+
+.previewCard {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 20px;
+}
+
+.largePreview {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--neon-cyan);
+    box-shadow: 0 0 30px rgba(0, 243, 255, 0.2);
+}
+
+.formContainer {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: var(--neon-cyan);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.uploadBox {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.uploadBtn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.uploadBtn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+}
+
+.saveBtn,
+.addBtn {
+    background: var(--primary-gradient);
+    color: #000;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.saveBtn:hover,
+.addBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(0, 243, 255, 0.3);
+}
+
+.hiddenInput {
+    display: none;
+}
+
+/* Modal */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.modal {
+    width: 100%;
+    max-width: 600px;
+    background: #0f0f0f;
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.closeBtn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 80px;
+        padding: 1rem;
+    }
+
+    .logoArea h2 span,
+    .navItem span,
+    .sidebarFooter button span {
+        display: none;
+    }
+
+    .logoArea h2 {
+        font-size: 0.8rem;
+    }
+
+    .navItem {
+        justify-content: center;
+    }
+
+    .main {
+        margin-left: 80px;
+    }
+
+    .profileLayout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -100%;
+        width: 280px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    .main {
+        margin-left: 0;
+        padding: 1.5rem 1rem;
+        width: 100%;
+    }
+
+    .topHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .welcomeMsg h1 {
+        font-size: 1.5rem;
+    }
+
+    .userBadge {
+        width: 40px;
+        height: 40px;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .actionButtons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .actionBtn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .viewHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .addBtn {
+        width: 100%;
+    }
+
+    .formContainer {
+        padding: 1.5rem;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .modal {
+        max-width: 90%;
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .pageTitle {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        padding: 1rem 0.5rem;
+    }
+
+    .pageTitle {
+        font-size: 1.5rem;
+    }
+
+    .statValue {
+        font-size: 2rem;
+    }
+
+    .statCard {
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .cardHeader h3 {
+        font-size: 1rem;
+    }
+
+    .formGroup input,
+    .formGroup textarea {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    .saveBtn,
+    .addBtn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .modal {
+        max-width: 95%;
+        padding: 1rem;
+    }
+
+    .welcomeMsg h1 {
+        font-size: 1.3rem;
+    }
+
+    .date {
+        font-size: 0.8rem;
+    }
+}

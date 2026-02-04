@@ -1,0 +1,137 @@
+/* Admin Dashboard - Enhanced Responsive Styles */
+
+/* Append after existing styles */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -280px;
+        width: 280px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    .main {
+        margin-left: 0;
+        padding: 1.5rem 1rem;
+        width: 100%;
+    }
+
+    .topHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .welcomeMsg h1 {
+        font-size: 1.5rem;
+    }
+
+    .userBadge {
+        width: 40px;
+        height: 40px;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .actionButtons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .actionBtn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .viewHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .addBtn {
+        width: 100%;
+    }
+
+    .formContainer {
+        padding: 1.5rem;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .modal {
+        max-width: 90%;
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .pageTitle {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        padding: 1rem 0.5rem;
+    }
+
+    .pageTitle {
+        font-size: 1.5rem;
+    }
+
+    .statValue {
+        font-size: 2rem;
+    }
+
+    .statCard {
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .cardHeader h3 {
+        font-size: 1rem;
+    }
+
+    .formGroup input,
+    .formGroup textarea {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    .saveBtn,
+    .addBtn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .modal {
+        max-width: 95%;
+        padding: 1rem;
+    }
+
+    .welcomeMsg h1 {
+        font-size: 1.3rem;
+    }
+
+    .date {
+        font-size: 0.8rem;
+    }
+}

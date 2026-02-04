@@ -1,0 +1,163 @@
+.projects {
+    padding: 120px 0;
+    background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
+    position: relative;
+}
+
+.sectionTitle {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 4rem;
+    text-align: center;
+    font-weight: 800;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+.card {
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--primary-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+    border-color: rgba(0, 243, 255, 0.3);
+    box-shadow:
+        0 20px 60px -15px rgba(0, 243, 255, 0.15),
+        0 0 0 1px rgba(0, 243, 255, 0.1);
+}
+
+.cardContent {
+    position: relative;
+    z-index: 1;
+}
+
+.category {
+    color: var(--neon-cyan);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.4rem 1rem;
+    background: rgba(0, 243, 255, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 243, 255, 0.2);
+}
+
+.title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.description {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.techStack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    background: rgba(0, 243, 255, 0.1);
+    color: var(--neon-cyan);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: rgba(157, 0, 255, 0.25);
+    border-color: rgba(157, 0, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        padding: 60px 0;
+    }
+
+    .sectionTitle {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .category {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+    }
+}

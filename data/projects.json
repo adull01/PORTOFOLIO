@@ -1,0 +1,35 @@
+[
+    {
+        "id": "1",
+        "title": "Neon Dashboard",
+        "category": "Web App",
+        "description": "A futuristic dashboard with real-time data visualization.",
+        "tech": [
+            "React",
+            "D3.js",
+            "Firebase"
+        ]
+    },
+    {
+        "id": "2",
+        "title": "E-Commerce Ultra",
+        "category": "E-Commerce",
+        "description": "High-performance shopping platform with headless architecture.",
+        "tech": [
+            "Next.js",
+            "Stripe",
+            "Sanity"
+        ]
+    },
+    {
+        "id": "3",
+        "title": "Cyber Portfolio",
+        "category": "Design",
+        "description": "Personal portfolio website with immersive WebGL animations.",
+        "tech": [
+            "Three.js",
+            "GSAP",
+            "WebGL"
+        ]
+    }
+]
