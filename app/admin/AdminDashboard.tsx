@@ -18,7 +18,7 @@ const LANGUAGES = [
     { code: 'es', name: 'Español', flag: '🇪🇸' },
     { code: 'jp', name: '日本語', flag: '🇯🇵' },
     { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'su', name: 'Basa Sunda', flag: '💠' },
+    { code: 'sun', name: 'Basa Sunda', flag: '💠' },
 ];
 
 const TRANSLATIONS = {
@@ -147,7 +147,7 @@ const TRANSLATIONS = {
         updateProfile: "Mettre à jour",
         uploadNew: "Télécharger une photo"
     },
-    su: {
+    sun: {
         dashboard: "Dasbor",
         projects: "Proyék",
         profile: "Profil",
@@ -174,7 +174,7 @@ const TRANSLATIONS = {
     }
 };
 
-type LanguageCode = 'en' | 'id' | 'es' | 'jp' | 'fr' | 'su';
+type LanguageCode = 'en' | 'id' | 'es' | 'jp' | 'fr' | 'sun';
 
 export default function AdminDashboard({ initialProjects, initialProfile }: { initialProjects: Project[], initialProfile: Profile }) {
     const [activeTab, setActiveTab] = useState<'dashboard' | 'projects' | 'profile'>('dashboard');

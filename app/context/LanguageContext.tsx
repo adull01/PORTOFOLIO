@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-type LanguageCode = 'en' | 'id' | 'es' | 'jp' | 'fr' | 'su';
+type LanguageCode = 'en' | 'id' | 'es' | 'jp' | 'fr' | 'sun';
 
 const TRANSLATIONS = {
     en: {
@@ -248,7 +248,7 @@ const TRANSLATIONS = {
             }
         }
     },
-    su: {
+    sun: {
         navbar: {
             about: 'Perkawis',
             projects: 'Proyék',
@@ -316,7 +316,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     const [lang, setLang] = useState<LanguageCode>('en');
 
     return (
-        <LanguageContext.Provider value={{ lang, setLang, t: TRANSLATIONS[lang] }}>
+        <LanguageContext.Provider value={{ lang, setLang, t: TRANSLATIONS[lang as keyof typeof TRANSLATIONS] }}>
             {children}
         </LanguageContext.Provider>
     );
